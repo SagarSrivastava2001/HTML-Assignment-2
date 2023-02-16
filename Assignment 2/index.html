@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function phonenumber(){
+            var a = document.getElementById("pno").value;
+
+            if(a==""){
+                document.getElementById("messages").innerHTML = "** Please fill Mobile Number **";
+                return false;
+            }
+
+            if(isNaN(a)){
+                document.getElementById("messages").innerHTML = "** Only Digits are allowed **";
+                return false;
+            }
+
+            if(a.length < 10){
+                document.getElementById("messages").innerHTML = "** Phone Number must be 10 digit **";
+                return false;
+            }
+
+            if(a.length > 10){
+                document.getElementById("messages").innerHTML = "** Phone Number must be 10 digit **";
+                return false;
+            }
+
+            if(a.charAt(0) != 9 && a.charAt(0) != 8 && a.charAt(0) != 7 && a.charAt(0) != 6){
+                document.getElementById("messages").innerHTML = "** Phone Number must start with 9,8,7,6 **";
+                return false;                
+            }
+        }
+    </script>
+
+    <link rel = "icon" href = "/Images/form.jpg" 
+    type = "image/x-icon">
+
+</head>
+
+<body style="background-color: rgba(255, 255, 128, .5);">
+
+    <h3> Student Registration Form </h3>
+
+    <table class="table1">
+        <form action="#" name="form" onsubmit="return phonenumber()">
+
+            <tr>
+                <td>
+                    <label for="name"> <b>Name: </b> </label>
+                </td>
+
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="tel"> <b>Phone No:</b> </label>
+                </td>
+
+                <td>
+                    <input type="tel" id="pno">
+                    <span id="messages" style="color: red;"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="dob"> <b> Date of Birth: </b>  </label>
+                </td>
+
+                <td>
+                    <input type="date" id="dob">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label for="address" id="address"> <b>Address: </b></label>
+                </td>
+
+                <td>
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="gender" id = "gender"> <b>Gender:</b></label>
+                </td>
+
+                <td>
+                    <input type="radio" name = "gender">  <label for="male">Male</label>
+                    <input type="radio" name = "gender"> <label for="female">Female</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="city" id="city"> <b>City:</b> </label>
+                </td>
+                <td>
+                    <select name="city" id="city">
+                        <option value="select_city"> Select City</option>
+                        <option value="delhi"> Delhi</option>
+                        <option value="bombay"> Bombay</option>
+                        <option value="kolkata"> Kolkata </option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="hobbies" id="hobbies"><b>Hobbies:</b></label>
+                </td>
+                <td>
+                    <input type="checkbox" name="music">
+                    <label for="music"> Music </label>      <br>
+
+                    <input type="checkbox" name="sports">
+                    <label for="sports"> Sports </label>    <br>
+
+                    <input type="checkbox" name="reading">
+                    <label for="music"> Reading </label>      <br>
+
+                    <input type="checkbox" name="travelling">
+                    <label for="sports"> Travelling </label>    <br> 
+
+                    <input type="checkbox" name="singing">
+                    <label for="music"> Singing </label>      <br>
+
+                    <input type="checkbox" name="dancing">
+                    <label for="sports"> Dancing </label>  
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="submit">
+                    <input type="submit">
+                </td>
+
+                <td class="reset">
+                    <input type="reset">
+                </td>
+            </tr>
+        </form>
+    </table>
+    <br> <br>
+    <h3>
+        Student Records
+    </h3>
+
+    <table class = "table2">
+        <tr>
+            <th>S.No.</th>
+            <th>Name</th>
+            <th>Phone No.</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Interests</th>
+        </tr>
+
+        <tr>
+            <td>1)</td>
+            <td>Amit Kumar</td>
+            <td>9715234870</td>
+            <td>Male</td>
+            <td>24/03/1988</td>
+            <td>Music <br> Sports <br> Travelling</td>
+        </tr>
+
+        <tr>
+            <td>2)</td>
+            <td>Mohit Sharma</td>
+            <td>7582364191</td>
+            <td>Male</td>
+            <td>03/08/1995</td>
+            <td>Singing <br> Dancing</td>
+        </tr>
+
+        <tr>
+            <td>3)</td>
+            <td>Prerna Sharma</td>
+            <td>8561234782</td>
+            <td>Female</td>
+            <td>17/11/1999</td>
+            <td>Reading <br> Travelling <br> Dancing</td>
+        </tr>
+    </table>
+</body>
+</html>

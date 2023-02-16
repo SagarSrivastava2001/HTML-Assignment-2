@@ -1,0 +1,28 @@
+h3{
+    text-align: center;
+}
+
+textarea{
+    resize:none;
+}
+
+.table1{
+    border-collapse:separate;
+    border-spacing:15px 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table2{
+    border-spacing: 15px 15px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.submit{
+    text-align: center;
+}
+
+.reset{
+    text-align: justify;
+}
